@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PURSUE UAP Archive Explorer — 294 Declassified Files</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="hdr-inner">
+    <div class="brand">
+      <div class="stamp" data-i18n="stamp">DECLASSIFIED</div>
+      <h1>PURSUE <span class="thin">UAP ARCHIVE</span></h1>
+      <p class="sub" data-i18n="subtitle"></p>
+    </div>
+    <div class="hdr-right">
+      <button id="langBtn" class="lang-btn">EN</button>
+    </div>
+  </div>
+  <nav id="nav">
+    <button data-tab="overview" class="active" data-i18n="nav_overview"></button>
+    <button data-tab="browse" data-i18n="nav_browse"></button>
+    <button data-tab="analysis" data-i18n="nav_analysis"></button>
+    <button data-tab="games" data-i18n="nav_games"></button>
+    <button data-tab="refs" data-i18n="nav_refs"></button>
+  </nav>
+</header>
+
+<main>
+  <!-- ============ OVERVIEW ============ -->
+  <section id="tab-overview" class="tab active">
+    <div class="cards" id="statCards"></div>
+    <div class="chart-grid">
+      <div class="panel"><h3 data-i18n="ch_agency"></h3><div id="chAgency"></div></div>
+      <div class="panel"><h3 data-i18n="ch_type"></h3><div id="chType"></div></div>
+      <div class="panel"><h3 data-i18n="ch_decade"></h3><div id="chDecade"></div></div>
+      <div class="panel"><h3 data-i18n="ch_score"></h3><div id="chScore"></div></div>
+      <div class="panel"><h3 data-i18n="ch_theme"></h3><div id="chTheme"></div></div>
+      <div class="panel"><h3 data-i18n="ch_red"></h3><div id="chRed"></div></div>
+    </div>
+    <div class="panel note"><p data-i18n="ov_note"></p></div>
+  </section>
+
+  <!-- ============ BROWSE ============ -->
+  <section id="tab-browse" class="tab">
+    <div class="filters panel">
+      <input id="q" type="search" data-i18n-ph="search_ph">
+      <select id="fRelease"></select>
+      <select id="fAgency"></select>
+      <select id="fType"></select>
+      <select id="fScore"></select>
+      <span id="count" class="count"></span>
+    </div>
+    <div id="list"></div>
+    <div class="center"><button id="more" class="btn" data-i18n="load_more"></button></div>
+  </section>
+
+  <!-- ============ ANALYSIS ============ -->
+  <section id="tab-analysis" class="tab">
+    <div id="analysisBody"></div>
+  </section>
+
+  <!-- ============ GAMES ============ -->
+  <section id="tab-games" class="tab">
+    <div class="panel game-panel">
+      <h3 data-i18n="g1_title"></h3>
+      <p class="muted" data-i18n="g1_desc"></p>
+      <div id="quizBox"></div>
+    </div>
+    <div class="panel game-panel">
+      <h3 data-i18n="g2_title"></h3>
+      <p class="muted" data-i18n="g2_desc"></p>
+      <div id="timelineBox"></div>
+    </div>
+  </section>
+
+  <!-- ============ REFS ============ -->
+  <section id="tab-refs" class="tab">
+    <div id="refsBody"></div>
+  </section>
+</main>
+
+<footer>
+  <p data-i18n="footer"></p>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
