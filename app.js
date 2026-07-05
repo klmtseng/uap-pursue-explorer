@@ -105,7 +105,8 @@ document.addEventListener("DOMContentLoaded", () => {
 function renderAll() {
   document.querySelectorAll("[data-i18n]").forEach(el => { el.textContent = t(el.dataset.i18n); });
   document.querySelectorAll("[data-i18n-ph]").forEach(el => { el.placeholder = t(el.dataset.i18nPh); });
-  renderStats(); renderCharts(); initBrowse(); renderAnalysis(); initQuiz(); initTimeline(); renderRefs();
+  renderStats(); renderCharts(); initBrowse(); renderAnalysis(); renderRefs();
+  if (window.initGames) window.initGames();
 }
 
 /* ================= overview ================= */

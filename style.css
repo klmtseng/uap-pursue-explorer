@@ -98,6 +98,60 @@ main{max-width:1100px;margin:0 auto;padding:24px 20px 60px}
 .tl-slot{font-family:var(--mono);color:var(--acc2)}
 .tl-result{margin-top:10px;font-size:.9rem}
 .ok{color:var(--grn)} .bad{color:var(--red)}
+/* ===== games ===== */
+.game-nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.game-nav button{background:var(--panel);border:1px solid var(--line);color:var(--muted);padding:9px 14px;border-radius:6px;cursor:pointer;font-size:.9rem}
+.game-nav button.active{border-color:var(--acc);color:var(--acc)}
+.game-nav button:hover{color:var(--tx)}
+.gr-hud{font-family:var(--mono);font-size:.85rem;color:var(--muted);margin:6px 0 10px}
+.gr-case{background:#10161e;border:1px solid var(--line);border-left:3px solid var(--acc2);border-radius:6px;padding:12px 14px;font-size:.9rem;margin-bottom:12px}
+.small{font-size:.78rem}
+.map-wrap{width:100%;aspect-ratio:2/1;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#0a1420;cursor:crosshair}
+#mapSvg{width:100%;height:100%;display:block}
+#mapSvg .ocean{fill:#0d1b2a}
+#mapSvg .cont{fill:#243b4a;stroke:#3a5568;stroke-width:.4}
+#mapSvg .grat{stroke:#1b2c3a;stroke-width:.3}
+#mapSvg .grat.eq{stroke:#2c4456;stroke-width:.5}
+#mapSvg .pin-you{fill:var(--acc);stroke:#fff;stroke-width:.6}
+#mapSvg .pin-real{fill:var(--red);stroke:#fff;stroke-width:.6}
+#mapSvg .pin-line{stroke:var(--acc2);stroke-width:.6;stroke-dasharray:2 1.5}
+.gr-year{margin:12px 0;font-size:.9rem;display:flex;align-items:center;gap:10px}
+.gr-year input[type=range]{flex:1;accent-color:var(--acc)}
+.gr-score{background:#10161e;border:1px solid var(--line);border-radius:6px;padding:12px;margin:12px 0;font-size:.88rem}
+/* duel */
+.duel-q{text-align:center;margin:10px 0 16px;font-size:1.02rem;color:var(--tx)}
+.duel-row{display:flex;align-items:center;gap:12px;justify-content:center}
+.duel-card{flex:1;max-width:320px;background:#10161e;border:1px solid var(--line);border-radius:8px;padding:16px;cursor:pointer;min-height:150px;display:flex;flex-direction:column;gap:8px;transition:transform .1s}
+.duel-card:hover{border-color:var(--acc);transform:translateY(-3px)}
+.duel-card.win{border-color:var(--grn);background:#0e1f14}
+.duel-card.lose{border-color:var(--red);opacity:.6}
+.dc-badge{font-family:var(--mono);font-size:.72rem;color:var(--acc2)}
+.dc-title{font-weight:600;font-size:.92rem;flex:1}
+.dc-pick{text-align:center;color:var(--muted);font-size:1.1rem}
+.vs{font-family:var(--mono);color:var(--muted);font-size:.85rem}
+/* desk */
+.desk-clues{display:flex;flex-direction:column;gap:7px;margin:10px 0}
+.clue{background:#10161e;border:1px solid var(--line);border-radius:5px;padding:9px 12px;font-size:.88rem}
+.clue.off{color:var(--muted);opacity:.55}
+.clue-lb{display:inline-block;font-family:var(--mono);font-size:.68rem;color:var(--acc2);min-width:130px}
+.dk-ask{color:var(--acc);margin:12px 0 8px}
+.verdict-btns{display:flex;gap:10px;flex-wrap:wrap}
+.verdict-btns button{flex:1;min-width:120px;padding:12px;border-radius:6px;border:1px solid var(--line);background:var(--panel);color:var(--tx);cursor:pointer;font-size:.92rem}
+.verdict-btns button:hover{border-color:var(--acc)}
+.verdict-btns button.correct{border-color:var(--grn);color:var(--grn)}
+.verdict-btns button.wrong{border-color:var(--red);color:var(--red)}
+.btn.ghost{background:none;border-style:dashed;margin:4px 0 8px;padding:7px 16px;font-size:.82rem}
+.quiz-fb2{margin-top:12px;font-size:.88rem;background:#10161e;border:1px solid var(--line);border-radius:6px;padding:12px}
+/* debunk */
+.db-list{display:flex;flex-direction:column;gap:8px;margin:10px 0}
+.db-card{display:flex;gap:10px;align-items:flex-start;background:#10161e;border:1px solid var(--line);border-radius:6px;padding:11px 13px;cursor:pointer;position:relative}
+.db-card:hover{border-color:var(--acc)}
+.db-card input{margin-top:3px;accent-color:var(--acc)}
+.db-card.is-res{border-color:var(--acc2)}
+.db-card.is-unres{border-color:#5a6b7a}
+.db-tag{position:absolute;right:10px;top:10px;font-family:var(--mono);font-size:.68rem;padding:1px 8px;border-radius:10px}
+.db-tag.t-res{background:#3a2a10;color:var(--acc2)}
+.db-tag.t-unres{background:#1b2c3a;color:var(--muted)}
 /* refs */
 .ref-group{margin-bottom:18px}
 .ref-group h3{color:var(--acc);font-size:1rem;margin-bottom:8px}
