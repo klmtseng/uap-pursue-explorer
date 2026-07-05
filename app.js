@@ -13,7 +13,7 @@ const I18N = {
     search_ph: "搜尋標題 / ID / 摘要…", all: "全部", release: "批次", agency: "機關", type: "類型", score: "評分",
     load_more: "載入更多", results: "筆結果",
     f_summary: "摘要", f_conclusion: "官方結論 / 裁定", f_highlight: "亮點", f_links: "原始檔連結",
-    lk_orig: "war.gov 原始檔", lk_wb: "Wayback 存檔", lk_dvids: "DVIDS 影音頁", lk_none: "(影音記錄——見 DVIDS 連結;無單獨文件檔)",
+    lk_wb: "📄 開啟檔案(存檔·全球可讀)", lk_orig: "war.gov 官方源(美國境外常被封鎖)", lk_dvids: "DVIDS 影音頁", lk_none: "(影音記錄——見 DVIDS 連結;無單獨文件檔)",
     date: "事件日期", loc: "地點", red: "塗黑",
     g1_title: "🎖️ 分析官考核:已解釋還是未解決?",
     g1_desc: "以下都是真實檔案。讀完摘要,判斷官方最終裁定是「已解釋/騙局」還是「至今未解決」。",
@@ -36,7 +36,7 @@ const I18N = {
     search_ph: "Search title / ID / summary…", all: "All", release: "Release", agency: "Agency", type: "Type", score: "Score",
     load_more: "Load more", results: "results",
     f_summary: "Summary", f_conclusion: "Official conclusion / verdict", f_highlight: "Why it matters", f_links: "Source links",
-    lk_orig: "war.gov original", lk_wb: "Wayback archive", lk_dvids: "DVIDS video page", lk_none: "(AV record — see DVIDS link; no standalone document)",
+    lk_wb: "📄 Open file (archived · works worldwide)", lk_orig: "war.gov official (often geo-blocked outside US)", lk_dvids: "DVIDS video page", lk_none: "(AV record — see DVIDS link; no standalone document)",
     date: "Incident date", loc: "Location", red: "Redaction",
     g1_title: "🎖️ Analyst Exam: Explained or Unresolved?",
     g1_desc: "All cases below are real files. Read the summary and judge whether the official verdict was \"explained / hoax\" or \"still unresolved\".",
@@ -187,9 +187,9 @@ function renderList() {
   document.getElementById("list").innerHTML = filtered.slice(0, shown).map((r, i) => {
     const tx = r[L].s ? r[L] : r.zh;
     const links = [];
-    if (r.links.orig) links.push(`<a href="${r.links.orig}" target="_blank" rel="noopener">${t("lk_orig")} ↗</a>`);
     if (r.links.wayback) links.push(`<a href="${r.links.wayback}" target="_blank" rel="noopener">${t("lk_wb")} ↗</a>`);
     if (r.links.dvids) links.push(`<a href="${r.links.dvids}" target="_blank" rel="noopener">${t("lk_dvids")} ↗</a>`);
+    if (r.links.orig) links.push(`<a href="${r.links.orig}" target="_blank" rel="noopener" class="muted-link">${t("lk_orig")} ↗</a>`);
     return `<div class="rec" data-i="${i}">
       <div class="top"><span class="rid">${esc(r.id)}</span><span class="rtitle">${esc(r.title)}</span>
         <span class="badge s${r.score}">★${r.score}</span><span class="badge">${r.type}</span>
