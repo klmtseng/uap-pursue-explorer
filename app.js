@@ -25,6 +25,9 @@ const I18N = {
     g2_check: "你的排序:", g2_perfect: "全對!你對 UAP 檔案史瞭若指掌。", g2_close: "對了 {n} 個位置。", g2_retry: "重排",
     footer: "資料來源:war.gov/ufo(PURSUE Releases 01-03)。本站為獨立研究專案,摘要由 AI 輔助逐筆閱讀產生,可能含 OCR/轉錄誤差;以原始檔為準。",
     quiz_src: "檔案", timeline_ans: "正確順序",
+    disc_title: "非官方研究專案。",
+    disc_body: "本站與美國政府無關。每筆摘要由 AI 輔助逐筆閱讀原始檔(OCR/語音轉錄)產生,可能含誤差——請勿當成官方定論引用;一切以 war.gov 原始檔為準。",
+    disc_ok: "我了解,進入",
   },
   en: {
     stamp: "DECLASSIFIED",
@@ -48,6 +51,9 @@ const I18N = {
     g2_check: "Your order:", g2_perfect: "Perfect! You know your UAP history.", g2_close: "{n} positions correct.", g2_retry: "Retry",
     footer: "Source: war.gov/ufo (PURSUE Releases 01-03). Independent research project; summaries were produced by AI-assisted close reading and may contain OCR/transcription errors — the original files are authoritative.",
     quiz_src: "File", timeline_ans: "Correct order",
+    disc_title: "Unofficial research project.",
+    disc_body: "This site is not affiliated with the U.S. government. Each summary was produced by AI-assisted close reading of the source files (OCR / speech-to-text) and may contain errors — do not cite it as an official finding; the original files at war.gov are authoritative.",
+    disc_ok: "I understand — enter",
   }
 };
 const AGENCY_EN2ZH = {
@@ -85,6 +91,14 @@ document.addEventListener("DOMContentLoaded", () => {
     b.classList.add("active");
     document.getElementById("tab-" + b.dataset.tab).classList.add("active");
   }));
+  // 免責提示條:每個 session 顯示一次,關閉後不再擾人
+  const ss = { get(k){try{return sessionStorage.getItem(k)}catch(e){return null}}, set(k,v){try{sessionStorage.setItem(k,v)}catch(e){}} };
+  const disc = document.getElementById("disclaimer");
+  if (!ss.get("uap_disc_ok")) disc.style.display = "block";
+  document.getElementById("discOk").addEventListener("click", () => {
+    ss.set("uap_disc_ok", "1");
+    disc.style.display = "none";
+  });
   renderAll();
 });
 

@@ -6,6 +6,14 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--tx);font-family:-apple-system,"Noto Sans TC","Microsoft JhengHei",sans-serif;line-height:1.65}
+.disclaimer{background:#2a1f10;border-bottom:1px solid var(--acc2)}
+.disc-inner{max-width:1100px;margin:0 auto;padding:12px 20px;display:flex;gap:12px;align-items:center}
+.disc-icon{font-size:1.3rem;flex-shrink:0}
+.disc-text{flex:1;font-size:.85rem;line-height:1.5}
+.disc-text b{color:var(--acc2)}
+.disc-btn{flex-shrink:0;background:var(--acc2);color:#1a1204;border:none;padding:8px 16px;border-radius:4px;cursor:pointer;font-size:.85rem;font-weight:600;white-space:nowrap}
+.disc-btn:hover{opacity:.85}
+@media(max-width:640px){.disc-inner{flex-wrap:wrap}}
 header{border-bottom:1px solid var(--line);background:linear-gradient(180deg,#0a0e13,var(--bg))}
 .hdr-inner{max-width:1100px;margin:0 auto;padding:26px 20px 10px;display:flex;justify-content:space-between;align-items:flex-start}
 h1{font-size:1.9rem;letter-spacing:.12em;font-family:var(--mono)}
