@@ -254,10 +254,10 @@ const STORIES = [
   },
   {
     zh: ["主線 5|太空計畫的異常記錄",
-      "Apollo 16 科學簡報音檔中,研究員正式描述月球軌道「首次回報的瞬態閃光事件」並要求定位;McDivitt 在 Gemini 4 軌道目擊形狀可辨的物體——官方描述淡化為「看到火花」,與文件實質嚴重不符;Apollo 17 照片的三角形光點是全集中唯一標注「分析進行中」的案例。"],
+      "Apollo 16 科學簡報音檔中,研究員正式描述月球軌道「首次回報的瞬態閃光事件」並要求定位;Gemini 7 的 Borman 以「bogey」報告目標,文件上更有手寫批注「UFO Sighting by Borman」;Apollo 11 的 Aldrin 描述有相當尺寸、疑為 S-IVB 火箭的物體及艙內閃光;Apollo 17 照片的三角形光點是全集中唯一標註「分析進行中」的案例。多數水星/雙子座音檔的『異常』實為太空船脫落粒子(『螢火蟲』)現象。"],
     en: ["Storyline 5 | Anomalies in the space program",
-      "In the Apollo 16 science debriefing audio, investigators formally describe \"the first transient flash event reported from lunar orbit\" and ask for time-and-position tracking; McDivitt sighted a shape-resolvable object with confirmed closing velocity on Gemini 4 — the official blurb waters it down to \"sparks\", starkly at odds with the document; the triangular light on an Apollo 17 photo is the only case in the corpus marked \"analysis ongoing\"."],
-    ids: "NASA-UAP-D024 · D016 · D003 · D004 · VM006"
+      "In the Apollo 16 science debriefing audio, investigators formally describe \"the first transient flash event reported from lunar orbit\" and ask for time-and-position tracking; on Gemini 7 Borman reports a \"bogey\", and the document even carries the handwritten note \"UFO Sighting by Borman\"; on Apollo 11 Aldrin describes a sizeable object tentatively ascribed to the S-IVB stage plus in-cabin flashes; the triangular light on an Apollo 17 photo is the only case in the corpus marked \"analysis ongoing\". Most Mercury/Gemini \"anomalies\" are the known spacecraft-shed particle (\"firefly\") phenomenon."],
+    ids: "NASA-UAP-D024 · D003 · D004 · VM006"
   },
   {
     zh: ["主線 6|現代軍事遭遇:感測器時代(2022-2024)",
