@@ -241,7 +241,11 @@ function clues(r) {
   ];
 }
 function gameDesk() {
-  dkState = { pool: shuffle(VERDICTS).slice(0, 6), i: 0, total: 0 };
+  // 分層抽樣:每局保證 3 已解決類(explained/hoax)+ 3 未解決,避免一律猜未解決就贏
+  const solved = VERDICTS.filter(v => v.verdict !== "unresolved");
+  const unres = VERDICTS.filter(v => v.verdict === "unresolved");
+  const pool = shuffle([...shuffle(solved).slice(0, 3), ...shuffle(unres).slice(0, 3)]);
+  dkState = { pool, i: 0, total: 0 };
   renderDesk();
 }
 function renderDesk() {
